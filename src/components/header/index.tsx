@@ -3,7 +3,6 @@
 import Image from "next/image";
 import styles from "./styles.module.scss";
 import Link from "next/link";
-import logoImage from "../../../public/logo.png";
 import { useState } from "react";
 import { FiAlignJustify } from "react-icons/fi";
 
@@ -20,11 +19,12 @@ export function Header({ logo }: { logo: string }) {
         <Link href="/">
           <Image
             className={styles.logo}
-            src={logoImage}
+            src={logo}
             alt="Logo da empresa"
             priority
             quality={100}
-            width={60}
+            fill
+            sizes="(max-width: 640px) 50vw, 100vw"
           />
         </Link>
       </div>
@@ -32,7 +32,7 @@ export function Header({ logo }: { logo: string }) {
         <Link href="/">Home</Link>
         <Link href="/#sobre">Sobre nós</Link>
         <Link href="/#servicos">Serviços</Link>
-        <Link href="/#pri">Portfólio</Link>
+        <Link href="/#projetos">Projetos</Link>
         <Link href="/#contato">Contato</Link>
       </div>
       <div className={styles.menuToggle} onClick={toggleMenu}>
