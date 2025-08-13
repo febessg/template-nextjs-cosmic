@@ -17,6 +17,10 @@ export default async function Home() {
         <Services />
         <Projects />
       </Container>
+      <p className={styles.copyright}>
+        {object.metadata.company} &copy; {new Date().getFullYear()} - Todos os
+        direitos reservados
+      </p>
     </div>
   );
 }
