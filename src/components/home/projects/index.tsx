@@ -6,7 +6,7 @@ import Image from "next/image";
 export async function Projects() {
   const { object }: HomeProps = await getDataHome();
   return (
-    <section className={styles.projects}>
+    <section className={styles.projects} id="projetos">
       <h2 className={styles.title}>{object.metadata.about.title}</h2>
       <p className={styles.subtitle}>{object.metadata.about.subtitle}</p>
       <p className={styles.text}>{object.metadata.about.text}</p>
