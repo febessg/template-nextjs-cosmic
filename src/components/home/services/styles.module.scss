@@ -58,6 +58,11 @@
   text-align: center;
   flex: 1 1 20%; /* Padrão para telas grandes (aproximadamente 4 colunas) */
   max-width: 23%; /* Garante que não fiquem muito largos */
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 
   @media screen and (max-width: 1285px) {
     flex-basis: 45%; /* Duas colunas */
