@@ -5,7 +5,7 @@ import { getDataHome } from "@/utils/actions/get-data";
 export async function About() {
   const { object }: HomeProps = await getDataHome();
   return (
-    <section className={styles.about}>
+    <section className={styles.about} id="sobre">
       <h2 className={styles.title}>{object.metadata.about.title}</h2>
       <p className={styles.subtitle}>{object.metadata.about.subtitle}</p>
       <p className={styles.text}>{object.metadata.about.text}</p>

@@ -5,7 +5,7 @@ import { getDataHome } from "@/utils/actions/get-data";
 export async function Services() {
   const { object }: HomeProps = await getDataHome();
   return (
-    <section className={styles.services}>
+    <section className={styles.services} id="servicos">
       <h2 className={styles.title}>{object.metadata.services.title}</h2>
       <p className={styles.subtitle}>{object.metadata.services.subtitle}</p>
       <p className={styles.text}>{object.metadata.services.text}</p>
