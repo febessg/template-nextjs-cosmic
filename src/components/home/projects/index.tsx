@@ -7,9 +7,9 @@ export async function Projects() {
   const { object }: HomeProps = await getDataHome();
   return (
     <section className={styles.projects} id="projetos">
-      <h2 className={styles.title}>{object.metadata.about.title}</h2>
-      <p className={styles.subtitle}>{object.metadata.about.subtitle}</p>
-      <p className={styles.text}>{object.metadata.about.text}</p>
+      <h2 className={styles.title}>{object.metadata.projects.title}</h2>
+      <p className={styles.subtitle}>{object.metadata.projects.subtitle}</p>
+      <p className={styles.text}>{object.metadata.projects.text}</p>
       <div className={styles.projectsList}>
         {object.metadata.projects.project.map((item) => (
           <div key={item.name} className={styles.projectItem}>
