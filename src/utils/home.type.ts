@@ -32,7 +32,7 @@ export interface HomeProps {
         title: string;
         subtitle: string;
         text: string;
-        projects: ProjectProps[];
+        project: ProjectProps[];
       };
       contact: {
         phone: string;
