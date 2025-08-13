@@ -1,0 +1,105 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4rem 1.5rem 4rem;
+
+  @media screen and (max-width: 768px) {
+    padding: 0 1rem;
+  }
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #be1e2d;
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: #be1e2d;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.text {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #000;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.servicesList {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-evenly;
+  gap: 1rem;
+  width: 100%;
+  flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.serviceItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Alinha o conteúdo no topo */
+  text-align: center;
+  flex: 1 1 20%; /* Padrão para telas grandes (aproximadamente 4 colunas) */
+  max-width: 23%; /* Garante que não fiquem muito largos */
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  @media screen and (max-width: 1285px) {
+    flex-basis: 45%; /* Duas colunas */
+    max-width: 45%;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-basis: 100%; /* Uma coluna */
+    max-width: 100%;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #be1e2d;
+    margin-bottom: 0.5rem;
+    min-height: 2.5em; /* Garante que o título tenha altura suficiente para 2 linhas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 768px) {
+      min-height: auto; /* Remove a altura mínima em telas menores */
+    }
+  }
+}
+
+.itemText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 1.2rem;
+  line-height: 1.2;
+  height: 100%; /* Ocupa toda a altura do pai */
+  width: 100%; /* Ocupa toda a largura do pai */
+}
