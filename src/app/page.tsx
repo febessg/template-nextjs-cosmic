@@ -7,6 +7,7 @@ import { About } from "@/components/home/about";
 import { Services } from "@/components/home/services";
 import { Projects } from "@/components/home/projects";
 import { Contact } from "@/components/home/contact";
+import { WppButton } from "@/components/home/wpp-button";
 
 export default async function Home() {
   const { object }: HomeProps = await getDataHome();
@@ -23,6 +24,7 @@ export default async function Home() {
         {object.metadata.company} &copy; {new Date().getFullYear()} - Todos os
         direitos reservados
       </p>
+      <WppButton />
     </div>
   );
 }
