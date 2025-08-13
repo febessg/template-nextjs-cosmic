@@ -6,4 +6,5 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  padding-top: 64px; /* Mesma altura do header */
 }
